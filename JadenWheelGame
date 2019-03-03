@@ -1,0 +1,44 @@
+# Program made by Jaden
+# These commands import special random and time functionality you can use
+import random
+import time
+
+# This is a function that runs the spin wheel game.
+# Note it will only run when Jaden tells it to run.
+def spin_wheel():
+    ans = input("Spin wheel?: ")
+    if ans == 'yes':
+        print("Spinning...")
+        time.sleep(3)
+        print("You won " + (random.choice(items)))
+    elif ans == 'no':
+        print("Exiting Wheel of Fortune...")
+
+
+# Here we have the choices for money that you can win.
+items = ["$1", "$2", "$5", "$7", "$10", "$20", "$50",]
+
+# Here is the first things you actually see. He tells you the game starts and gets your name.
+print("Entering wheel of Fortune")
+name = input("Enter your name: ")
+print("Loading user info...")
+
+# Great find Jaden...this adds a pause to the game!
+time.sleep(2)
+
+print("User acknowledged as " + name)
+
+action = input("What activity do you require? spin/balance: ")
+if action == 'spin':
+        spin_wheel()
+        # At this point code goes up to the top...runs the game...then returns back here!
+        time.sleep(1)
+        print("We are back here now!")
+        action = input("If you wish to one more time enter 'spin' else 'no': ")
+        if action == 'spin':
+            spin_wheel()
+        elif action == 'no':
+            print("Exiting Wheel of Fortune...")
+
+
+
