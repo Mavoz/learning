@@ -1,0 +1,40 @@
+
+import time
+
+def calculator():
+
+    num1 = float(input("What is your first number? "))
+    num2 = float(input("Now enter second number "))
+    op = input("What is your operator ")
+    print("Hang on..we're just calculating your request...")
+    type = 0
+
+    if op == "*":
+        print("Your answer is ")
+        print(num1 * num2)
+    elif op == "-":
+        print("Your answer is ")
+        print(num1 - num2)
+    elif op == "/":
+        print("Your answer is ")
+        print(num1 / num2)
+    elif op == "+":
+        print("Your answer is ")
+        print(num1 + num2)
+    else:
+        print("Invalid Operator")
+        time.sleep(3)
+        restart=input("Do you want to start again? ")
+        if restart == "yes":
+            calculator()
+
+        else:
+            exit()
+
+
+calculator()
+
+
+
+
+
